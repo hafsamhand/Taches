@@ -8,4 +8,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('taches',TacheController::class);
-Route::patch('taches/{id}/complete', [TacheController::class, 'complete'])->name('taches.complete');
+Route::post('taches/{id}/complete', [TacheController::class, 'complete'])->name('taches.complete');
